@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="#0a93c9">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="5"
+        android:id="@+id/labelNumber"
+        android:textColor="#ffffff"
+        android:textSize="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        style="@style/Base.Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+"
+        android:id="@+id/buttonIncrease"
+        android:textColor="#00b029"
+        android:padding="0dp"
+        android:textSize="50dp"
+        android:layout_alignTop="@+id/labelNumber"
+        android:layout_toLeftOf="@+id/labelNumber"
+        android:layout_toStartOf="@+id/labelNumber"
+        android:layout_alignBottom="@+id/labelNumber" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:id="@+id/buttonDecrease"
+        android:textSize="50dp"
+        style="@style/Base.Widget.AppCompat.Button.Borderless"
+        android:textColor="#ab0a0a"
+        android:layout_alignTop="@+id/labelNumber"
+        android:layout_toRightOf="@+id/labelNumber"
+        android:layout_toEndOf="@+id/labelNumber"
+        android:layout_alignBottom="@+id/labelNumber" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Chansa (1/7)"
+        android:id="@+id/buttonGuess"
+        android:layout_below="@+id/labelNumber"
+        android:layout_alignLeft="@+id/buttonIncrease"
+        android:layout_alignStart="@+id/buttonIncrease"
+        android:layout_alignRight="@+id/buttonDecrease"
+        android:layout_alignEnd="@+id/buttonDecrease"
+        style="@style/Base.Widget.AppCompat.Button.Borderless"
+        android:background="#0ac898"
+        android:textColor="#ffffff"
+        android:textSize="20dp" />
+
+    <ListView
+        android:layout_width="200dp"
+        android:layout_height="250dp"
+        android:id="@+id/listViewHigh"
+        android:layout_below="@+id/buttonGuess"
+        android:layout_marginTop="99dp"
+        android:background="#00b029"
+        android:layout_toLeftOf="@+id/listViewLow"
+        android:layout_toStartOf="@+id/listViewLow" />
+
+    <ListView
+        android:layout_width="200dp"
+        android:layout_height="250dp"
+        android:id="@+id/listViewLow"
+        android:background="#ab0a0a"
+        android:layout_alignTop="@+id/listViewHigh"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Större än"
+        android:id="@+id/textView5"
+        android:textColor="#ffffff"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Lägre än"
+        android:id="@+id/textView6"
+        android:textColor="#ffffff"
+        android:layout_alignTop="@+id/textView5"
+        android:layout_alignRight="@+id/listViewLow"
+        android:layout_alignEnd="@+id/listViewLow" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/resultLabel"
+        android:layout_above="@+id/textView5"
+        android:layout_centerHorizontal="true"
+        android:textSize="35dp"
+        android:textColor="#ffffff" />
+
+</RelativeLayout>
